@@ -1,0 +1,38 @@
+{%for block in section.blocks %}
+  <img src="{{ section.settings.image | img_url: '1200x'}}" alt="{{ section.settings.image.alt }}">
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Image Gallery",
+    "class": "image-gallery",
+    "tag": "section",
+    "max_blocks": 6,
+    "settings": [
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "An Image Block",
+        "settings": [
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Gallery",
+        "category": "Pup Gallery"
+      }
+    ]
+  }
+{% endschema %}

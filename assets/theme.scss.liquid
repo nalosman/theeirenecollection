@@ -3659,7 +3659,7 @@ $slick-opacity-not-active: 0.25;
   color: $color-drawers-text;
   background-color: $color-drawers;
   border-bottom: 1px solid rgba(0,0,0,0.1);
-  height: $height-site-header;  
+  height: $height-site-header;
   padding: 0 ($gutter-site / 2);
 }
 
@@ -5946,4 +5946,62 @@ $z-index-giftcard-code: 5;
     display: none;
   }
 }
+
+.banner-section {
+  text-align: center;
+
+  .banner-title {
+    color: white;
+  }
+}
+
+.banner-image {
+  background: center / cover no-repeat;
+  padding: 150px 20px;
+
+  @include media-query($medium-up) {
+    padding: 250px 20px;
+  }
+}
+
+.banner-subtitle {
+  color: white;
+  text-transform: uppercase;
+}
+
+.promo-blocks-section {
+  display: flex;
+  text-align: center;
+
+  .promo-block-title {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+  }
+}
+
+.promo-block-image {
+  position: relative;
+  background-image: center / cover no-repeat;
+  width: 100%;
+  padding: 50px 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.66);
+  }
+}
+
+.promo-block-subtitle {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+
+
 
